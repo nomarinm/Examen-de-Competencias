@@ -8,6 +8,7 @@ from plantcv import plantcv as pcv
 
 
 def tomarPuntos(idImageStr, image, color):
+    #cv2.imshow("imagen de entrada", image)
     ancho = image.shape[1]  # Calcula ancho
     alto = image.shape[0]  # Calcula alto
     if alto > 1000:  # si la imagens es muy grande hace un resize para poder visualizar con opencv
@@ -84,7 +85,7 @@ def BuildMask(puntos, imageDraw, mask, tamanoRoi):
             #print(chip)
             mask = cv2.drawContours(mask, chip[0], -1, (i * 10), -1)
             i += 1
-        #cv2.imwrite("img/mas_mask.jpg", mask)  # Guarda la mascara
+        #mask = mask*10 ####
 
     plt.subplot(1, 2, 1)
     plt.title('Target')

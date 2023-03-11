@@ -20,11 +20,11 @@ pest1 = ttk.Frame(panel)
 pest2 = ttk.Frame(panel)
 # Agrega pestañas
 panel.add(pest1, text='  CONFIGURAR  ')
-panel.add(pest2, text='  LEER DOCUMENTOS  ')
+panel.add(pest2, text='  CORREGIR IMÁGEN  ')
 
-btnDir = ttk.Button(pest1, text='SELECCIONE IMÁGENES', command=directorios.abrir)
+btnDir = ttk.Button(pest1, text='SELECCIONE IMAGENES', command=directorios.abrir)
 btnDir.pack(padx=20, pady=70)
-btnDi1 = ttk.Button(pest2, text='SELECCIONE UN DIRECTORIO', command=directorios.abrir)
+btnDi1 = ttk.Button(pest2, text='SELECCIONE LA REFERENCIA', command=directorios.nuevaFoto)
 btnDi1.pack(padx=20, pady=70)
 
 root.mainloop()
